@@ -5,7 +5,8 @@
 #Print Hello World!
 print("Hello World!")
 #Print a question asking for your name and a way for you to respond
-name = input(print("What is your name? "))
+
+name = input("What is your name? ")
 nameTitle = name.title()
 nameUpper = name.upper()
 nameLower = name.lower()
