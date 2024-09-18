@@ -12,3 +12,10 @@
 
 #It is up to you to decide what properties
 #are important and the theme of the game.
+
+#UPDATE: The testers have run into some bugs with your code. Some of the
+#code seems to not work correctly. For example, one of the testers changed
+#the damage for an enemy to 30 per attack, but when they attacked the player
+#character, the health went from 100 to 10030 instead of the intended 70.
+#The player's health is stored as an integer. Be sure to check that your
+#code does the same for enemy damage.
