@@ -5,7 +5,7 @@
 #Scenario 2:
 #The programmer in charge of the player character party stats is
 #having some issues with their code. Despite rigorous testing,
-#they are inexperienced and can't seem to figure out why it damage
+#they are inexperienced and can't seem to figure out why the damage
 #testing isn't working. Your team lead has asked you to help by fixing
 #the party dictionary, insert an enemy into the code below, and
 #testing to see if a player character can damage the with a printed
