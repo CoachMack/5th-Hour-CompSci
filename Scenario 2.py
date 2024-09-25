@@ -17,37 +17,44 @@ partyDictionary = {
         "Race" : "Githyanki",
         "Class" : "Fighter",
         "Background" : "Soldier",
-        "Health" : "12",
-        "AC" : "17",
-        "Damage" : "10",
+        "Health" : 12,
+        "AC" : 17,
+        "Damage" : 10,
     },
     "Shadowheart" : {
         "Race" : "Half-Elf",
         "Class" : "Cleric",
         "Background" : "Acolyte",
-        "Health" : "10",
-        "AC" : "14",
-        "Damage" : "5",
+        "Health" : 10,
+        "AC" : 14,
+        "Damage" : 5,
     },
     "Gale" : {
         "Race" : "Human",
         "Class" : "Wizard",
         "Background" : "Sage",
-        "Health" : "8",
-        "AC" : "14",
-        "Damage" : "17",
+        "Health" : 8,
+        "AC" : 14,
+        "Damage" : 17,
     },
     "Astarion" : {
         "Race" : "High Elf",
         "Class" : "Rogue",
         "Background" : "Charlatan",
-        "Health" : "10",
-        "AC" : "14",
-        "Damage" : "12",
+        "Health" : 10,
+        "AC" : 14,
+        "Damage" : 12,
     }
 }
 
 #Enemy Dictionary goes here
-
+enemyDict = {
+    "goblin" : {
+        "Health" : 6,
+        "Damage" : 2,
+        "AC" : 12
+    }
+}
 
 #Test the damage here by subtracting a party member's damage from the enemy's health.
+print(enemyDict["goblin"]["Health"] - partyDictionary["Astarion"]["Damage"])
