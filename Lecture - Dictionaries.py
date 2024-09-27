@@ -1,6 +1,6 @@
 #Name: Coach Mack
 #Class: 5th Hour
-#Assignment:
+#Assignment: Lecture - Dictionaries
 
 #Always start with a hello world to make sure your IDE works!
 print("Hello World!")
