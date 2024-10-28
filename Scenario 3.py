@@ -1,6 +1,7 @@
 #Name:
 #Class: 5th Hour
 #Assignment: Scenario 3
+import random
 
 #Scenario 3:
 #Now that the game development team has a dictionary for enemies
@@ -37,11 +38,79 @@
 #Step 6: Make every enemy and party member has a damage roll (random)
 
 #Party Dictionary Goes Here
-
+partyDict = {
+    "LaeZel" : {
+        "Race" : "Githyanki",
+        "Class" : "Fighter",
+        "Background" : "Soldier",
+        "Health" : 12,
+        "AC" : 17,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,6) + random.randint(1,6) + 3
+    },
+    "Shadowheart" : {
+        "Race" : "Half-Elf",
+        "Class" : "Cleric",
+        "Background" : "Acolyte",
+        "Health" : 10,
+        "AC" : 14,
+        "AtkMod": 3,
+        "Damage" : random.randint(1,6) + 3,
+    },
+    "Gale" : {
+        "Race" : "Human",
+        "Class" : "Wizard",
+        "Background" : "Sage",
+        "Health" : 8,
+        "AC" : 14,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,10),
+    },
+    "Astarion" : {
+        "Race" : "High Elf",
+        "Class" : "Rogue",
+        "Background" : "Charlatan",
+        "Health" : 10,
+        "AC" : 14,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,6) + 4,
+    }
+}
 
 
 #Enemy Dictionary Goes Here
-
+enemyDict = {
+    "Goblin" : {
+        "Health" : 6,
+        "AC" : 12,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,6) + 4,
+    },
+    "Orc": {
+        "Health" : 14,
+        "AC" : 14,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,6) + 4,
+    },
+    "Troll": {
+        "Health" : 22,
+        "AC" : 13,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,6) + 4,
+    },
+    "Dragon": {
+        "Health" : 56,
+        "AC" : 17,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,6) + 4,
+    },
+    "Mindflayer": {
+        "Health" : 110,
+        "AC" : 16,
+        "AtkMod": 5,
+        "Damage" : random.randint(1,6) + 4,
+    }
+}
 
 
 #Once both dictionaries are updated, create a combat
@@ -71,3 +140,39 @@
 
 
 #Combat Code Goes Here
+
+#What do we need?
+#- Enemy AC
+#- Party Attack Mod
+#- a D20 Roll
+#- Enemy HP
+#- Party Damage
+
+#Party Member: Astarion
+#Enemy: Goblin
+
+#if attack roll is greater than or equal to enemy AC, we hit
+if random.randint(1,20) + partyDict["Astarion"]["AtkMod"] >= enemyDict["Goblin"]["AC"]:
+    #if we hit, subtract Party Damage from Enemy HP
+    enemyDict["Goblin"]["Health"] -= partyDict["Astarion"]["Damage"]
+#   if enemy HP is less than or equal to zero, end code
+    if enemyDict["Goblin"]["Health"] > 0:
+    #   else say that enemy is still alive, go to enemy turn
+        print("Astarion hit! Gobbo is still alive!")
+    else:
+        print("Astarion hit! Gobbo is dead!")
+        exit()
+# if we miss, skip to enemy turn
+else:
+    print("Astarion missed!")
+
+
+if random.randint(1,20) + enemyDict["Goblin"]["AtkMod"] >= partyDict["Astarion"]["AC"]:
+    partyDict["Astarion"]["Health"] -= enemyDict["Goblin"]["Damage"]
+    if partyDict["Astarion"]["Health"] <= 0:
+        print("Gobbo hit! Astarion is down!")
+        exit()
+    else:
+        print("Gobbo hit! Astarion is alive!")
+else:
+    print("No one hit!")
