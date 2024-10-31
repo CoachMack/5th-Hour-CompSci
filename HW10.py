@@ -8,5 +8,5 @@
 #2. Create a while loop that prints only even numbers
 #between 1 and 30.
 
-#3. Create a while loop that repeats until the user
+#3. Create a while loop that asks for a number input until the user
 #inputs the number 0.
