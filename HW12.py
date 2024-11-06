@@ -1,6 +1,6 @@
 #Name:
 #Class: 5th Hour
-#Assignment: HW10
+#Assignment: HW12
 
 #1. Create a for loop with variable i that counts down from 5 to 1
 #and then prints "Hello World!" at the end.
