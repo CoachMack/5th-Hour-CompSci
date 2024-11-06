@@ -37,7 +37,8 @@ for y in fruits:
 
 
 #For loops can also spell out words if you make the "in" range just a single string.
-for z in "Samuel":
+#You can also put an input function in a similar scenario to put whatever word you want spelled out.
+for z in input("Give me a word: "):
     print(z)
 
 
