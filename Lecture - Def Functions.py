@@ -3,6 +3,7 @@
 #Assignment: Lecture - Def Functions
 import random
 
+
 #This is a def function. These are custom functions designed to "segment" and organize your code in
 #Python! You can also use them to reuse the same code but with different sets of data (called "arguments")
 #in a way that doesn't require copying and pasting said same code over and over again.
@@ -70,3 +71,24 @@ def number_game():
         exit()
 
 number_game()
+
+#You can also change variables outside of the def function using the "global" command. By establishing
+#the variable outside the function and then "calling" it inside, you can change the variable in any way
+#you want and it will change the value outside of the function too. This is a good way to "count"
+#results inside of the def function.
+
+x = 0
+
+def make_x_1():
+    #This is how you call the variable and make it global.
+    global x
+    x = 1
+
+
+def print_new_x():
+    print(x)
+
+#If you don't call any function that changes the variable globally, any other function that
+#uses the variable will use its original value, NOT the changed value.
+make_x_1()
+print_new_x()
