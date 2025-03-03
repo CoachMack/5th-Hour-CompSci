@@ -31,7 +31,7 @@ def subtraction(a, b):
 
 #However, you can do what are called "positional arguments" and assign them specfically like in the
 #call below.
-subtraction(b = 15, a = 27)
+subtraction(15,27)
 
 #Using a single asterisk in front of the variable, you can turn all of your arguments into a list,
 #and pull their values like you would a normal list.
