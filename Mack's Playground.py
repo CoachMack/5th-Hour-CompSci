@@ -111,7 +111,7 @@ def in_or_out():
                 column_play()
             elif userOutChoice == 6:
                 snake_play()
-    except:
+    except ValueError:
         print("Not a valid response. Please try again.")
         in_or_out()
 
@@ -348,6 +348,7 @@ def even_odd_play():
     repeat_game()
 
 def dozen_play():
+    global wagerAmount, playerPot
     try:
         userPick = int(input("Pick 1 for First Dozen (1-12),\n"
                              "2 for Second Dozen (13-24),\n"
@@ -378,6 +379,7 @@ def dozen_play():
     repeat_game()
 
 def column_play():
+    global wagerAmount, playerPot
     try:
         userPick = int(input("Pick 1 for First Column (1,4,7...),\n"
                              "2 for Second Column (2,5,8...),\n"
